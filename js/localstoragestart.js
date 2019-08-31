@@ -1,5 +1,5 @@
 try {
-  // Try to load the localStorage item, show any error on screen
+  // 尝试加载localStorage项目，在屏幕上显示任何错误
   var loadedSectionss = JSON.parse(localStorage.getItem('sectionList')) || []
   var loadedList = JSON.parse(localStorage.getItem('websitesList'))
 } catch (error) {
