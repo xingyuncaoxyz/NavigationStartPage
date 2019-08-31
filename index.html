@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <h1>The Nexus</h1>
-    <!-- Search bar, redirects to google -->
+    <!-- 搜索栏，重定向到谷歌 -->
     <form action="https://google.com/search?" method="get">
       <div class="form-group">
         <input type="text" name="q" class="form-control" placeholder="Search">
@@ -20,18 +20,18 @@
     <!-- End of search bar  -->
 
     <script type="text/template" id="addFormTemplate">
-      <!-- Modal to add websites -->
+      <!-- 添加网站模式 -->
 
-      <!-- Open the modal to edit websites -->
+      <!-- 开启编辑网站模式 -->
       <span data-toggle="modal" data-target="#AddSectionModal" title="Add a section">
         <span class="glyphicon glyphicon-th-list addSectionModal"></span></span>
       <span data-toggle="modal" data-target="#AddWebsiteModal" title="Add a website">
         <span class="glyphicon glyphicon-plus addSite"></span></span>
       <span data-toggle="modal" data-target="#DeleteWebsitesModal" title="Delete all websites">
         <span class="glyphicon glyphicon-trash"></span></span>
-      <span title="Save all sites">
+      <span title="保存所有网站">
         <span class="glyphicon glyphicon-save-file downloadSites"></span></span>
-      <span title="Upload saved sites">
+      <span title="上传已保存的网站">
         <span class="glyphicon glyphicon-open-file uploadFile"></span></span>
       <form id="fileForm">
         <input type="file" id="fileElem" multiple accept=".txt" style="display:none">
@@ -42,24 +42,24 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h3 class="modal-title">Add a Website</h3>
+              <h3 class="modal-title">添加一个网址</h3>
             </div>
             <div class="modal-body formulario">
               <!-- Form to add websites -->
               <form id="AddUrlForm">
                 <fieldset>
                   <div class="form-group">
-                    <label for="name">Name:</label><span id="ErrorName"></span>
+                    <label for="name">名称:</label><span id="ErrorName"></span>
                     <input type="text" class="form-control" id="name"  placeholder="Site's name">
                   </div>
                   <div class="form-group">
                     <label for="url">URL:</label><span id="errorUrl"></span>
-                    <input type="text" class="form-control" id="url" placeholder="https://example.org">
+                    <input type="text" class="form-control" id="url" placeholder="https://example.com/int">
                   </div>
                   <div class="form-group">
-                    <label for="Sections">Section:</label><span id="errorSection"></span>
+                    <label for="Sections">分类:</label><span id="errorSection"></span>
                     <select class="form-control" id="sections">
-                        <!-- This section will be automatically completed using javascript, see script.js -->
+                        <!-- 此部分将使用javascript自动完成，请参阅 script.js -->
                     </select>
                   </div>
                 </fieldset>
@@ -68,8 +68,8 @@
             </div>
             <div class="modal-footer">
               <span class="successMsg"></span>
-              <button type="button" class="btn btn-primary saveUrl">Add </button>
-              <button type="button" class="btn btn-default AddWebsiteModalClose" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary saveUrl">添加 </button>
+              <button type="button" class="btn btn-default AddWebsiteModalClose" data-dismiss="modal">关闭</button>
 
             </div>
           </div>
@@ -85,14 +85,14 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h3 class="modal-title">Delete all websites</h3>
+            <h3 class="modal-title">删除所有网址</h3>
           </div>
           <div class="modal-body">
-            <p>Clicking the button will delete all your saved websites and sections. Are you sure?</p>
+            <p>单击该按钮将删除所有已保存的网址和分类.你确定吗?</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger deleteAllSites" data-dismiss="modal">Yes, delete all my saved websites</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger deleteAllSites" data-dismiss="modal">是的，删除我保存的所有网址</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
 
     </script>
 
-    <!-- Modal to add sections -->
+    <!-- 添加分类模式 -->
     <div id="AddSectionModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
 
@@ -109,14 +109,14 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h3 class="modal-title">Add a section</h3>
+            <h3 class="modal-title">添加一个分类</h3>
           </div>
           <div class="modal-body">
             <!-- Form to add sections -->
             <form id="AddSectionForm">
               <fieldset>
                 <div class="form-group">
-                  <label for="name">Section name</label><span id="SectionNameError"></span><span class="SectionNameError"></span>
+                  <label for="name">分类名称</label><span id="SectionNameError"></span><span class="SectionNameError"></span>
                   <span class="SectionEmptyWarning"></span>
                   <input type="text" class="form-control" id="sectionName" placeholder="Section name">
                 </div>
@@ -127,22 +127,22 @@
           </div>
           <div class="modal-footer">
             <span id="successMsgSection"></span>
-            <button type="button" class="btn btn-primary addSection">Add Section</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary addSection">添加分类</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
           </div>
         </div>
       </div>
     </div>
     <!-- End of modal -->
 
-    <!-- Add Section Form -->
+    <!-- 添加分类表格 -->
     <script type="text/template" id="AddSectionTemplate">
       <div class="wrapperSection">
         <p>
             <%= name %>
           <!-- Icons to edit and delete only visibles on hover, see scripts.js -->
-          <span style="display: none" class="glyphicon glyphicon-pencil editSection" title="Click to edit">
-          </span> <span style="display: none" class="glyphicon glyphicon-minus-sign deleteSection" title="Double click to delete"> </span>
+          <span style="display: none" class="glyphicon glyphicon-pencil editSection" title="点击编辑">
+          </span> <span style="display: none" class="glyphicon glyphicon-minus-sign deleteSection" title="双击删除"> </span>
         </p>
       </div>
     </script>
@@ -156,8 +156,8 @@
             <%= name %>
           </a>
           <!-- Icons to edit and delete only visibles on hover, see scripts.js -->
-          <span style="display: none" class="glyphicon glyphicon-pencil editSite" title="Click to edit">
-            </span> <span style="display: none" class="glyphicon glyphicon-minus-sign deleteSite" title="Double click to delete"> </span>
+          <span style="display: none" class="glyphicon glyphicon-pencil editSite" title="点击编辑">
+            </span> <span style="display: none" class="glyphicon glyphicon-minus-sign deleteSite" title="双击删除"> </span>
         </p>
       </div>
     </script>
@@ -166,7 +166,7 @@
     <!-- Site edition form -->
     <script type="text/template" id="editionForm">
       <div class="EditForm">
-        <label for="EditFormName">Name:</label>
+        <label for="EditFormName">名称:</label>
         <div class="form-group">
           <input type="text" class="editName form-control" id="EditFormName" value="<%= name %>">
         </div>
@@ -174,12 +174,12 @@
         <div class="form-group">
           <input type="text" class="editURL form-control" id="EditFormURL" value="<%= url %>">
         </div>
-        <label for="Sections">Section:</label>
+        <label for="Sections">分类:</label>
         <select class="form-control" id="editSections">
           <!-- This section will be completed with javascript using section javascript variable, see script.js -->
         </select>
-        <button class="btn btn-primary editModel">Save</button>
-        <button class="btn btn-warning closeEdit">Close</button>
+        <button class="btn btn-primary editModel">保存</button>
+        <button class="btn btn-warning closeEdit">关闭</button>
       </div>
     </script>
     <!-- End of site edit form -->
@@ -188,12 +188,12 @@
     <!-- Section edition form -->
     <script type="text/template" id="sectionEditionForm">
       <div class="sectionEditForm">
-        <label for="EditSectionFormName">New section name:</label>
+        <label for="EditSectionFormName">新分类名称:</label>
         <div class="form-group">
           <input type="text" class="editSectionName form-control" id="EditFormName" value="<%= name %>">
         </div>
-        <button class="btn btn-primary editSectionModel">Save</button>
-        <button class="btn btn-warning closeSectionEdit">Close</button>
+        <button class="btn btn-primary editSectionModel">保存</button>
+        <button class="btn btn-warning closeSectionEdit">关闭</button>
       </div>
     </script>
     <!-- End of Section edit form -->
@@ -218,7 +218,7 @@
             <p id="errorText"></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
           </div>
         </div>
 
