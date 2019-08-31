@@ -98,16 +98,16 @@ var UrlListView = Backbone.View.extend({
         var sectionCID = sectionFound.cid
       }
       if ($('#' + sectionCID).length > 0) {
-        // If the section already exist, append the new website to it
+        // 如果该分类已存在，请将新网站附加到该分类
         $('#' + sectionCID).append(new vistaURL({
           model: site
         }).render().$el)
       } else {
         if (counter == 0 || counter % 4 == 0) {
-          // Add 4 columns to ech row (4x3 = 12(desired number))
+          // Add 4 columns to ech row (4x3 = 12(desired number)) 向ech行添加4列（4x3 = 12（所需数量))
           self.$el.append('<div class="row"></div>')
         }
-        // If it doesn't, add the respective section at the end and then append the model to it
+        // 如果没有，请在末尾添加相应的分类，然后将模型(model)附加到其中
         $('.row:last-child').append(`<div class="col-sm-3"><div class="box" id="${sectionCID}"><h3>${site.get('section')}</h3></div></div>`)
         counter += 1
         $('#' + sectionCID).append(new vistaURL({
@@ -141,7 +141,7 @@ var AddForm = Backbone.View.extend({
   checkForEmptySectionList: function(event) {
     event.stopPropagation()
     if (sectionss.length < 1) {
-      $('.SectionEmptyWarning').text(' *Please add at least one section to start adding sites.')
+      $('.SectionEmptyWarning').text(' *请添加至少一个分类以开始添加网址.')
       $('#AddSectionModal').modal('toggle')
     } else {
       $('#AddWebsiteModal').modal('toggle')
@@ -162,8 +162,8 @@ var AddForm = Backbone.View.extend({
       hiddenElement.download = 'sitesBackup.txt'
       hiddenElement.click()
     } else {
-      $('#errorTitle').text('There are no sites to backup')
-      $('#errorText').text('You can\'t create a backup of an empty list.')
+      $('#errorTitle').text('没有要备份的网址')
+      $('#errorText').text('你不能创建空列表的备份.')
       $('#errorModal').modal('toggle')
     }
   },
@@ -203,16 +203,16 @@ var AddForm = Backbone.View.extend({
           sectionFormView.render()
           websitesView.render()
         } else {
-          $('#errorTitle').text('Error with the file')
-          $('#errorText').text('Please delete all sites before uploading a saved sites file and make sure the uploaded file is a backup file.')
+          $('#errorTitle').text('文件错误')
+          $('#errorText').text('请在上传已保存的网址文件之前删除所有网址，并确保上传的文件是备份文件.')
           $('#errorModal').modal('toggle')
         }
       }
       r.readAsText(f)
       $('#fileForm').get(0).reset() // Reset the form so if a file with the same name is uploaded it stills triggers a change event
     } else {
-      $('#errorTitle').text('Failed to load the file')
-      $('#errorText').text('There was an error opening the file.')
+      $('#errorTitle').text('无法加载文件')
+      $('#errorText').text('打开文件时出错.')
       $('#errorModal').modal('toggle')
     }
   },
@@ -236,7 +236,7 @@ var AddForm = Backbone.View.extend({
 
   addHttpsText: function(e) {
     if ($(e.currentTarget).val() == '') {
-      $(e.currentTarget).val('https://')
+      $(e.currentTarget).val('https://heiban.me/')
     }
   },
 
@@ -256,7 +256,7 @@ var AddForm = Backbone.View.extend({
       $('#name').val('')
       $('#url').val('')
       localStorage.setItem('websitesList', JSON.stringify(list))
-      $('.successMsg').text(' *Your website has been added')
+      $('.successMsg').text(' *你的网址已添加')
     }
   }
 })
@@ -315,7 +315,7 @@ var sectionView = Backbone.View.extend({
       this.model.set({
         name: newSectionName,
       })
-      $('#successMsgSection').text('Section name changed!')
+      $('#successMsgSection').text('分类名称已更改!')
       if (list.length > 0) {
         this.updateSiteListSections(oldSectionName, newSectionName)
         localStorage.setItem('websitesList', JSON.stringify(list))
@@ -383,7 +383,7 @@ var sectionForm = Backbone.View.extend({
     })
     if (newSection.isValid()) {
       this.model.add([newSection])
-      $('#successMsgSection').text('Section added!')
+      $('#successMsgSection').text('已添加分类!')
       $('#sectionName').val('')
       $('.SectionEmptyWarning').text('')
       localStorage.setItem('sectionList', JSON.stringify(sectionss))
