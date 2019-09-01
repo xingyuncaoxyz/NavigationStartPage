@@ -17,6 +17,7 @@ body {
   font-size: 1.8em;
   background-color: #191919;
   color: #fff;
+  text-align: center;
 }
 
 a, a:hover, a:visited {
@@ -57,4 +58,8 @@ a, a:hover, a:visited {
 
 .url p:hover {
   padding-left: 1em;
+}
+
+.footer{
+    text-align: center;
 }
