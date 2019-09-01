@@ -1,0 +1,16 @@
+{"sites":[
+{"name":"幸运草","url":"https://xingyuncao.xyz","section":"幸运草"},
+{"name":"测试","url":"https://heiban.me/test","section":"幸运草"},
+{"name":"讨论","url":"https://heiban.me/taolun/","section":"幸运草"},
+{"name":"新闻","url":"https://heiban.me/news/","section":"幸运草"},
+{"name":"国际交流","url":"https://heiban.me/int/","section":"幸运草"},
+{"name":"动漫","url":"https://heiban.me/aam/","section":"魔法屋"},
+{"name":"插图","url":"https://heiban.me/chatu/","section":"魔法屋"},
+{"name":"游戏","url":"https://heiban.me/game/","section":"魔法屋"},
+{"name":"视频","url":"https://heiban.me/shipin/","section":"魔法屋"},
+{"name":"手机游戏","url":"https://heiban.me/game/","section":"兴趣"},
+{"name":"创作","url":"https://heiban.me/test/","section":"兴趣"},
+{"name":"宅男","url":"https://heiban.me/gemen/","section":"休闲版"},
+{"name":"姐妹们","url":"https://heiban.me/jiemei/","section":"休闲版"}
+],
+"sections":[{"name":"幸运草"},{"name":"魔法屋"},{"name":"兴趣"},{"name":"休闲版"}]}
