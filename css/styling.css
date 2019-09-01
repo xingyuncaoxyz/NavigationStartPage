@@ -16,8 +16,7 @@ body {
   font-family: GlacialIndifference;
   font-size: 1.8em;
   background-color: #191919;
-  color: #fff;
-  text-align: center;
+  color: #484747;
 }
 
 a, a:hover, a:visited {
@@ -28,7 +27,7 @@ a, a:hover, a:visited {
 /* Modal */
 .modal-content {
   background-color: #16181a;
-  color: #fff;
+  color: #484747;
   font-family: GlacialIndifference;
 }
 
@@ -50,7 +49,7 @@ a, a:hover, a:visited {
 }
 
 .url p {
-  padding-left: 0.6em;
+  /*padding-left: 0.6em;*/
   -webkit-transition: padding-left 0.3s;
   /* Safari */
   transition: padding-left 0.3s;
@@ -58,6 +57,7 @@ a, a:hover, a:visited {
 
 .url p:hover {
   padding-left: 1em;
+  color: #47f55d;
 }
 
 .footer{
