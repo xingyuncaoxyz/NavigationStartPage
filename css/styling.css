@@ -1,9 +1,4 @@
 @font-face {
-  font-family: 'GlacialIndifference';
-  src: url('../fonts/GlacialIndifference-Regular.otf');
-}
-
-@font-face {
   font-family: 'CooperHewittMedium';
   src: url('../fonts/CooperHewitt-Medium.otf');
 }
@@ -13,7 +8,7 @@ h1 {
 }
 
 body {
-  font-family: GlacialIndifference;
+  font-family: Arial;
   font-size: 1.8em;
   /*background-color: #191919;*/
   color: #484747;
@@ -28,7 +23,7 @@ a, a:hover, a:visited {
 .modal-content {
   background-color: #16181a;
   color: #484747;
-  font-family: GlacialIndifference;
+  font-family: Arial;
 }
 
 /* Form Success Messages */
