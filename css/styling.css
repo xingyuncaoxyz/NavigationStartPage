@@ -21,7 +21,7 @@ a, a:hover, a:visited {
 
 /* Modal */
 .modal-content {
-  background-color: #16181a;
+  /*background-color: #16181a;*/
   color: #484747;
   font-family: Arial;
 }
